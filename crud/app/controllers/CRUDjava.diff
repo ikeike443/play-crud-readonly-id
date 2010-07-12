@@ -1,0 +1,12 @@
+--- CRUD.java	Mon Jul 12 18:15:42 2010
++++ CRUD.java.mod	Mon Jul 12 16:03:52 2010
+@@ -405,7 +405,8 @@
+                     choices = field.getType().getEnumConstants();
+                 }
+                 if (field.isAnnotationPresent(Id.class)) {
+-                    type = null;
++                    //type = null;
++                	type = "id";//mod by ikeda 2010.07.12
+                 }
+                 if (field.isAnnotationPresent(Transient.class)) {
+                     type = null;

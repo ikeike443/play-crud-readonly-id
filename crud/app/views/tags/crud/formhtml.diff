@@ -1,0 +1,15 @@
+--- form.html	Sat Jun 12 17:13:00 2010
++++ form.html.mod	Mon Jul 12 18:34:48 2010
+@@ -89,7 +91,11 @@
+                 #{if field.type == 'serializedText'}
+                     #{crud.textField name:field.name, value:(currentObject ? controllers.CRUD.collectionSerializer(currentObject[field.name]) : null), property:field /}
+                 #{/if}
+-
++				<!-- mod by ikeda 2010.07.12 -->
++				#{if field.type == 'id'}
++                    #{crud.idField_readonly name:field.name, value:(currentObject ? currentObject[field.name] : null) /}
++                #{/if}
++                <!-- mod by ikeda 2010.07.12 -->
+ 
+                 <span class="crudHelp">
+                     &{am}
