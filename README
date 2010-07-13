@@ -1,3 +1,5 @@
+It is a patch for Play! framework to customize crud module to be able to show id and to prohibit editing id.
+
 It includes 2 patches and 1 new file.
 
 
